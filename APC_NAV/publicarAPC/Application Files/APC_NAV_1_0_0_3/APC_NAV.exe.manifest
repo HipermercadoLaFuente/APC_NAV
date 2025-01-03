@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="APC_NAV.exe" version="1.0.0.3" publicKeyToken="4a6e29d52f53eec1" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="APC_NAV" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="APC_NAV.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opciones del manifiesto de Control de cuentas de usuario
+          Si desea cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el 
+          nodo requestedExecutionLevel por alguno de los siguientes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Si desea usar la virtualización de archivos y del Registro para la 
+         compatibilidad con versiones anteriores, elimine el nodo requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="APC_NAV.exe" size="1285120">
+      <assemblyIdentity name="APC_NAV" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>iv7Uxfz1H8fgkjqoS3m7CvL9xb+9Xu7GeXsLbvF7gec=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="APC_NAV.exe.config" size="187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xm4bo26HQ0LNVwz1vdPYtzhkpMnp2AI5i+f0b+OahTI=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=LAFUENTE\adiaz" issuerKeyHash="1eef624f97819f24822ee52512c4786b21eee959" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>3DLqZ1m9CPzwDufgxTzOoRYfULJyJnMfYPe3/hOKrEA=</DigestValue></Reference></SignedInfo><SignatureValue>KabyItsgKKb03pv4noKEma2p9EIY19dhvcQJRVA6n/GOuOSoJKNxZkf5QyggUk/KIjMX07ZqdAylEE936CbSFSlibAOx/pfDYJ2dJU89ipp2ZdfCWGVZegz9Jj7CJmSYrkHusZGoswA9qblWHojWcDzt6iK6EkmrN7vCvM4EtaY=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>pgEwnxn2eOFI30Ajvq7L17LXBRIJeTQP3GC8pSFI1RRNizoxOydvFrMZ+Vg4S1Mny+mF1tuywJbglDFa/IVSI7SOgtSUI4MdGIEWgW8/GAoRAGU6w5BTRzBCS17BDkQZZuHiKAXWVQ0iQbiCE9zsqJFdk3MWp6RZwQVElfyODxE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="40ac8a13feb7f7601f732672b2501f16a1ce3cc5e0e70ef0fc08bd5967ea32dc" Description="" Url=""><as:assemblyIdentity name="APC_NAV.exe" version="1.0.0.3" publicKeyToken="4a6e29d52f53eec1" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=LAFUENTE\adiaz</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>8Od1iqIi4DAwrbSwCVgz1mxU/uzpSoyIV2AuQGWOnDA=</DigestValue></Reference></SignedInfo><SignatureValue>XUOn2dcid4100B6agMp7fAHhnpWo3MRS0NyjZvaH851vwHEbZrV/eKTqs+UsVWsfEZMuIRYOjBbiRGCl5QeZ9Bs1438pUgpYj/xnhcKhujqWC+3l+4SPQO1duWAOU/um0TOT0B03pr1QwO8BYBbd1p2Lzb5LDGE8ZpzN57bktig=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>pgEwnxn2eOFI30Ajvq7L17LXBRIJeTQP3GC8pSFI1RRNizoxOydvFrMZ+Vg4S1Mny+mF1tuywJbglDFa/IVSI7SOgtSUI4MdGIEWgW8/GAoRAGU6w5BTRzBCS17BDkQZZuHiKAXWVQ0iQbiCE9zsqJFdk3MWp6RZwQVElfyODxE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCATqgAwIBAgIQEzF3MxI/dY9CCx+7M+EMMTANBgkqhkiG9w0BAQsFADAnMSUwIwYDVQQDHhwATABBAEYAVQBFAE4AVABFAFwAYQBkAGkAYQB6MB4XDTIwMDIxMjIxNTc0OVoXDTIxMDIxMjAzNTc0OVowJzElMCMGA1UEAx4cAEwAQQBGAFUARQBOAFQARQBcAGEAZABpAGEAejCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEApgEwnxn2eOFI30Ajvq7L17LXBRIJeTQP3GC8pSFI1RRNizoxOydvFrMZ+Vg4S1Mny+mF1tuywJbglDFa/IVSI7SOgtSUI4MdGIEWgW8/GAoRAGU6w5BTRzBCS17BDkQZZuHiKAXWVQ0iQbiCE9zsqJFdk3MWp6RZwQVElfyODxECAwEAATANBgkqhkiG9w0BAQsFAAOBgQBBwyPl9NJjuwC+Q8BSo3jP5bHA/DMPCdAx/RsKFgAd6qpa19mvtnyZobk1kAKlTgKJhVub0T1W7doSvglxm36t1XlCSWQ2L34sNy8A52G5c0SKCOs8lEQP4sibBeSxJuWuIEqXH/AlZbW6lRW5l8/euNuRbii7E7NfiIn3R9sUgQ==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

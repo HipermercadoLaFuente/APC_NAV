@@ -1,0 +1,51 @@
+c:\users\adiaz\documents\visual studio 2013\Projects\APC_NAV\APC_NAV\bin\Debug\APC_NAV.exe.config
+c:\users\adiaz\documents\visual studio 2013\Projects\APC_NAV\APC_NAV\bin\Debug\APC_NAV.exe
+c:\users\adiaz\documents\visual studio 2013\Projects\APC_NAV\APC_NAV\bin\Debug\APC_NAV.pdb
+c:\users\adiaz\documents\visual studio 2013\Projects\APC_NAV\APC_NAV\obj\Debug\APC_NAV.ItemMasterForm.resources
+c:\users\adiaz\documents\visual studio 2013\Projects\APC_NAV\APC_NAV\obj\Debug\APC_NAV.PrincipalMenu.resources
+c:\users\adiaz\documents\visual studio 2013\Projects\APC_NAV\APC_NAV\obj\Debug\APC_NAV.Properties.Resources.resources
+c:\users\adiaz\documents\visual studio 2013\Projects\APC_NAV\APC_NAV\obj\Debug\APC_NAV.SugestionForm.resources
+c:\users\adiaz\documents\visual studio 2013\Projects\APC_NAV\APC_NAV\obj\Debug\APC_NAV.csproj.GenerateResource.Cache
+c:\users\adiaz\documents\visual studio 2013\Projects\APC_NAV\APC_NAV\obj\Debug\APC_NAV.exe
+c:\users\adiaz\documents\visual studio 2013\Projects\APC_NAV\APC_NAV\obj\Debug\APC_NAV.pdb
+c:\users\adiaz\documents\visual studio 2013\Projects\APC_NAV\APC_NAV\obj\Debug\APC_NAV.csprojResolveAssemblyReference.cache
+C:\Users\adiaz\documents\visual studio 2013\Projects\APC_NAV\APC_NAV\bin\Debug\APC_NAV.exe.manifest
+C:\Users\adiaz\documents\visual studio 2013\Projects\APC_NAV\APC_NAV\bin\Debug\APC_NAV.application
+C:\Users\adiaz\documents\visual studio 2013\Projects\APC_NAV\APC_NAV\obj\Debug\APC_NAV.exe.manifest
+C:\Users\adiaz\documents\visual studio 2013\Projects\APC_NAV\APC_NAV\obj\Debug\APC_NAV.application
+C:\Users\adiaz\documents\visual studio 2013\Projects\APC_NAV\APC_NAV\obj\Debug\APC_NAV.ApprovedPrices.resources
+C:\Users\adiaz\Desktop\HLF PROJECTS ANS INSTALLERS\APC_NAV\APC_NAV\bin\Debug\APC_NAV.exe.config
+C:\Users\adiaz\Desktop\HLF PROJECTS ANS INSTALLERS\APC_NAV\APC_NAV\bin\Debug\APC_NAV.exe.manifest
+C:\Users\adiaz\Desktop\HLF PROJECTS ANS INSTALLERS\APC_NAV\APC_NAV\bin\Debug\APC_NAV.application
+C:\Users\adiaz\Desktop\HLF PROJECTS ANS INSTALLERS\APC_NAV\APC_NAV\bin\Debug\APC_NAV.exe
+C:\Users\adiaz\Desktop\HLF PROJECTS ANS INSTALLERS\APC_NAV\APC_NAV\bin\Debug\APC_NAV.pdb
+C:\Users\adiaz\Desktop\HLF PROJECTS ANS INSTALLERS\APC_NAV\APC_NAV\obj\Debug\APC_NAV.csprojAssemblyReference.cache
+C:\Users\adiaz\Desktop\HLF PROJECTS ANS INSTALLERS\APC_NAV\APC_NAV\obj\Debug\APC_NAV.ApprovedPrices.resources
+C:\Users\adiaz\Desktop\HLF PROJECTS ANS INSTALLERS\APC_NAV\APC_NAV\obj\Debug\APC_NAV.ItemMasterForm.resources
+C:\Users\adiaz\Desktop\HLF PROJECTS ANS INSTALLERS\APC_NAV\APC_NAV\obj\Debug\APC_NAV.PrincipalMenu.resources
+C:\Users\adiaz\Desktop\HLF PROJECTS ANS INSTALLERS\APC_NAV\APC_NAV\obj\Debug\APC_NAV.Properties.Resources.resources
+C:\Users\adiaz\Desktop\HLF PROJECTS ANS INSTALLERS\APC_NAV\APC_NAV\obj\Debug\APC_NAV.SugestionForm.resources
+C:\Users\adiaz\Desktop\HLF PROJECTS ANS INSTALLERS\APC_NAV\APC_NAV\obj\Debug\APC_NAV.csproj.GenerateResource.cache
+C:\Users\adiaz\Desktop\HLF PROJECTS ANS INSTALLERS\APC_NAV\APC_NAV\obj\Debug\APC_NAV.csproj.CoreCompileInputs.cache
+C:\Users\adiaz\Desktop\HLF PROJECTS ANS INSTALLERS\APC_NAV\APC_NAV\obj\Debug\APC_NAV.exe.manifest
+C:\Users\adiaz\Desktop\HLF PROJECTS ANS INSTALLERS\APC_NAV\APC_NAV\obj\Debug\APC_NAV.application
+C:\Users\adiaz\Desktop\HLF PROJECTS ANS INSTALLERS\APC_NAV\APC_NAV\obj\Debug\APC_NAV.exe
+C:\Users\adiaz\Desktop\HLF PROJECTS ANS INSTALLERS\APC_NAV\APC_NAV\obj\Debug\APC_NAV.pdb
+C:\Users\hamse\OneDrive\Documentos\APC_NAV\APC_NAV\obj\Debug\APC_NAV.csproj.AssemblyReference.cache
+C:\Users\hamse\OneDrive\Documentos\APC_NAV\APC_NAV\obj\Debug\APC_NAV.csproj.SuggestedBindingRedirects.cache
+C:\Users\hamse\OneDrive\Documentos\APC_NAV\APC_NAV\obj\Debug\APC_NAV.ApprovedPrices.resources
+C:\Users\hamse\OneDrive\Documentos\APC_NAV\APC_NAV\obj\Debug\APC_NAV.ItemMasterForm.resources
+C:\Users\hamse\OneDrive\Documentos\APC_NAV\APC_NAV\obj\Debug\APC_NAV.PrincipalMenu.resources
+C:\Users\hamse\OneDrive\Documentos\APC_NAV\APC_NAV\obj\Debug\APC_NAV.Properties.Resources.resources
+C:\Users\hamse\OneDrive\Documentos\APC_NAV\APC_NAV\obj\Debug\APC_NAV.SugestionForm.resources
+C:\Users\hamse\OneDrive\Documentos\APC_NAV\APC_NAV\obj\Debug\APC_NAV.csproj.GenerateResource.cache
+C:\Users\hamse\OneDrive\Documentos\APC_NAV\APC_NAV\obj\Debug\APC_NAV.csproj.CoreCompileInputs.cache
+C:\Users\hamse\OneDrive\Documentos\APC_NAV\APC_NAV\obj\Debug\APC_NAV.exe
+C:\Users\hamse\OneDrive\Documentos\APC_NAV\APC_NAV\obj\Debug\APC_NAV.pdb
+C:\Users\hamse\OneDrive\Documentos\APC_NAV\APC_NAV\bin\Debug\APC_NAV.exe.config
+C:\Users\hamse\OneDrive\Documentos\APC_NAV\APC_NAV\bin\Debug\APC_NAV.exe.manifest
+C:\Users\hamse\OneDrive\Documentos\APC_NAV\APC_NAV\bin\Debug\APC_NAV.application
+C:\Users\hamse\OneDrive\Documentos\APC_NAV\APC_NAV\bin\Debug\APC_NAV.exe
+C:\Users\hamse\OneDrive\Documentos\APC_NAV\APC_NAV\bin\Debug\APC_NAV.pdb
+C:\Users\hamse\OneDrive\Documentos\APC_NAV\APC_NAV\obj\Debug\APC_NAV.exe.manifest
+C:\Users\hamse\OneDrive\Documentos\APC_NAV\APC_NAV\obj\Debug\APC_NAV.application
