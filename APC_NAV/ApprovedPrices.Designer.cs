@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,6 +105,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1707, 282);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             this.dataGridView1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
             // 
@@ -158,9 +159,9 @@
             // previousCost
             // 
             this.previousCost.DataPropertyName = "previousCost";
-            dataGridViewCellStyle21.Format = "N2";
-            dataGridViewCellStyle21.NullValue = "0";
-            this.previousCost.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = "0";
+            this.previousCost.DefaultCellStyle = dataGridViewCellStyle1;
             this.previousCost.HeaderText = "Costo previo";
             this.previousCost.Name = "previousCost";
             this.previousCost.ReadOnly = true;
@@ -169,9 +170,9 @@
             // newCost
             // 
             this.newCost.DataPropertyName = "newCost";
-            dataGridViewCellStyle22.Format = "N2";
-            dataGridViewCellStyle22.NullValue = "0";
-            this.newCost.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.newCost.DefaultCellStyle = dataGridViewCellStyle2;
             this.newCost.HeaderText = "Nuevo costo";
             this.newCost.Name = "newCost";
             this.newCost.ReadOnly = true;
@@ -180,9 +181,9 @@
             // previousPrice
             // 
             this.previousPrice.DataPropertyName = "previousPrice";
-            dataGridViewCellStyle23.Format = "N2";
-            dataGridViewCellStyle23.NullValue = "0";
-            this.previousPrice.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = "0";
+            this.previousPrice.DefaultCellStyle = dataGridViewCellStyle3;
             this.previousPrice.HeaderText = "Precio actual";
             this.previousPrice.Name = "previousPrice";
             this.previousPrice.ReadOnly = true;
@@ -191,9 +192,9 @@
             // newSugestedPrice
             // 
             this.newSugestedPrice.DataPropertyName = "newSugestedPrice";
-            dataGridViewCellStyle24.Format = "N2";
-            dataGridViewCellStyle24.NullValue = "0";
-            this.newSugestedPrice.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = "0";
+            this.newSugestedPrice.DefaultCellStyle = dataGridViewCellStyle4;
             this.newSugestedPrice.HeaderText = "Precio sugerido";
             this.newSugestedPrice.Name = "newSugestedPrice";
             this.newSugestedPrice.ReadOnly = true;
@@ -202,11 +203,11 @@
             // costVariation
             // 
             this.costVariation.DataPropertyName = "costVariation";
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle25.Format = "N2";
-            dataGridViewCellStyle25.NullValue = "0";
-            this.costVariation.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = "0";
+            this.costVariation.DefaultCellStyle = dataGridViewCellStyle5;
             this.costVariation.HeaderText = "% Variación";
             this.costVariation.Name = "costVariation";
             this.costVariation.ReadOnly = true;
@@ -225,19 +226,19 @@
             // priceAssignedTochange
             // 
             this.priceAssignedTochange.DataPropertyName = "priceAssignedTochange";
-            dataGridViewCellStyle26.Format = "N2";
-            dataGridViewCellStyle26.NullValue = "0";
-            this.priceAssignedTochange.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle6.Format = "N2";
+            dataGridViewCellStyle6.NullValue = "0";
+            this.priceAssignedTochange.DefaultCellStyle = dataGridViewCellStyle6;
             this.priceAssignedTochange.HeaderText = "Precio asignado";
             this.priceAssignedTochange.Name = "priceAssignedTochange";
             // 
             // priceChangeMargin
             // 
             this.priceChangeMargin.DataPropertyName = "priceChangeMargin";
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle27.Format = "N2";
-            dataGridViewCellStyle27.NullValue = "0";
-            this.priceChangeMargin.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle7.Format = "N2";
+            dataGridViewCellStyle7.NullValue = "0";
+            this.priceChangeMargin.DefaultCellStyle = dataGridViewCellStyle7;
             this.priceChangeMargin.HeaderText = "% Margen";
             this.priceChangeMargin.Name = "priceChangeMargin";
             this.priceChangeMargin.ReadOnly = true;
@@ -253,10 +254,10 @@
             // vatPercet
             // 
             this.vatPercet.DataPropertyName = "vatPercet";
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.Format = "N2";
-            dataGridViewCellStyle28.NullValue = null;
-            this.vatPercet.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.Format = "N2";
+            dataGridViewCellStyle8.NullValue = null;
+            this.vatPercet.DefaultCellStyle = dataGridViewCellStyle8;
             this.vatPercet.HeaderText = "ITBIS";
             this.vatPercet.Name = "vatPercet";
             this.vatPercet.ReadOnly = true;
@@ -264,10 +265,10 @@
             // quantity
             // 
             this.quantity.DataPropertyName = "quantity";
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.Format = "N2";
-            dataGridViewCellStyle29.NullValue = null;
-            this.quantity.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.Format = "N2";
+            dataGridViewCellStyle9.NullValue = null;
+            this.quantity.DefaultCellStyle = dataGridViewCellStyle9;
             this.quantity.HeaderText = "Cantidad";
             this.quantity.Name = "quantity";
             this.quantity.ReadOnly = true;
@@ -275,8 +276,8 @@
             // userID
             // 
             this.userID.DataPropertyName = "userID";
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.userID.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.userID.DefaultCellStyle = dataGridViewCellStyle10;
             this.userID.HeaderText = "Usuario";
             this.userID.Name = "userID";
             this.userID.ReadOnly = true;

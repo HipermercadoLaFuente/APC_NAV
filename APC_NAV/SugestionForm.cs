@@ -55,7 +55,22 @@ namespace APC_NAV
 
             
             DataTable dt = new DataTable();
-            String query = "select Item.description,APC_sugestion_queue.*,[Hipermercado La Fuente, SA$VAT Posting Setup].[VAT _],APC_sugestion_queue.last_change_user from APC_sugestion_queue inner join Item on Item.[No_] =APC_sugestion_queue.item_id inner join [dbo].[Hipermercado La Fuente, SA$VAT Posting Setup] on [dbo].[Hipermercado La Fuente, SA$VAT Posting Setup].[VAT Prod_ Posting Group] = [Item].[VAT Prod_ Posting Group] and [dbo].[Hipermercado La Fuente, SA$VAT Posting Setup].[VAT Bus_ Posting Group]= 'NAC' where (APC_sugestion_queue.sugestion_status = 0 or sugestion_status=2) and APC_sugestion_queue.posted_invoice_id='" + ((StringComboBoxItem)comboBoxVendorInvoiceList.SelectedItem).value + "'";
+            //String query = "select Item.description,APC_sugestion_queue.*,[Hipermercado La Fuente, SA$VAT Posting Setup].[VAT _],APC_sugestion_queue.last_change_user from APC_sugestion_queue inner join Item on Item.[No_] =APC_sugestion_queue.item_id inner join [dbo].[Hipermercado La Fuente, SA$VAT Posting Setup] on [dbo].[Hipermercado La Fuente, SA$VAT Posting Setup].[VAT Prod_ Posting Group] = [Item].[VAT Prod_ Posting Group] and [dbo].[Hipermercado La Fuente, SA$VAT Posting Setup].[VAT Bus_ Posting Group]= 'NAC' where (APC_sugestion_queue.sugestion_status = 0 or sugestion_status=2) and APC_sugestion_queue.posted_invoice_id='" + ((StringComboBoxItem)comboBoxVendorInvoiceList.SelectedItem).value + "'";
+
+            //Query adaptado para BC, falta probar por falta de data
+            String query = "SELECT " +
+                "i.[Description]," +
+                "APC_sugestion_queue.*," +
+                "vpsetup.[VAT _]," +
+                "APC_sugestion_queue.last_change_user " +
+                "FROM APC_sugestion_queue " +
+                "INNER JOIN [dbo].[HLF$Item$437dbf0e-84ff-417a-965d-ed2bb9650972] i ON i.[No_] = APC_sugestion_queue.item_id " +
+                "INNER JOIN [dbo].[HLF$VAT Posting Setup$437dbf0e-84ff-417a-965d-ed2bb9650972] vpsetup on vpsetup.[VAT Prod_ Posting Group] = i.[VAT Prod_ Posting Group] " +
+                "and vpsetup.[VAT Bus_ Posting Group]= 'NAC' " +
+                "where (APC_sugestion_queue.sugestion_status = 0 or sugestion_status=2) " +
+                "and APC_sugestion_queue.posted_invoice_id='" + ((StringComboBoxItem)comboBoxVendorInvoiceList.SelectedItem).value + "'";
+
+
             dt = DBConnection.queryTable(query);
             
             foreach (DataRow row in dt.Rows)
@@ -128,13 +143,23 @@ namespace APC_NAV
 
             dataGridView1.Refresh();
 
-            String query = "select APC_sugestion_queue.posted_invoice_id, [Hipermercado La Fuente, SA$Purch_ Inv_ Header].[Buy-from Vendor Name],\n"+
+            //Antiguo query, trabaja con NAV 2015
+            /*String query = "select APC_sugestion_queue.posted_invoice_id, [Hipermercado La Fuente, SA$Purch_ Inv_ Header].[Buy-from Vendor Name],\n"+
                             "[Hipermercado La Fuente, SA$Purch_ Inv_ Header].[Posting Date]\n"+
                             "from APC_sugestion_queue inner join [dbo].[Hipermercado La Fuente, SA$Purch_ Inv_ Header]\n"+
                             "on [Hipermercado La Fuente, SA$Purch_ Inv_ Header].[No_] = APC_sugestion_queue.posted_invoice_id\n"+
                             "where APC_sugestion_queue.sugestion_status = 0 or sugestion_status=2\n"+
                             "group by APC_sugestion_queue.posted_invoice_id, [Hipermercado La Fuente, SA$Purch_ Inv_ Header].[Buy-from Vendor Name],[Hipermercado La Fuente, SA$Purch_ Inv_ Header].[Posting Date]\n" +
-                            "order by [Hipermercado La Fuente, SA$Purch_ Inv_ Header].[Posting Date] asc";
+                            "order by [Hipermercado La Fuente, SA$Purch_ Inv_ Header].[Posting Date] asc";*/
+
+            //Query adaptado para BC 27
+            String query = "SELECT queue_.posted_invoice_id, pih.[Buy-from Vendor Name], pih.[Posting Date] " +
+                "FROM APC_sugestion_queue queue_ " +
+                "INNER JOIN [dbo].[HLF$Purch_ Inv_ Header$437dbf0e-84ff-417a-965d-ed2bb9650972] pih ON pih.[No_] = queue_.[posted_invoice_id] " +
+                "WHERE queue_.sugestion_status = 0 or queue_.sugestion_status=2 " +
+                "GROUP BY queue_.posted_invoice_id, pih.[Buy-from Vendor Name], pih.[Posting Date] " +
+                "ORDER BY pih.[Posting Date] asc;";
+
             DataTable dt = DBConnection.queryTable(query);
 
             comboBoxVendorInvoiceList.Items.Clear();

@@ -129,7 +129,14 @@ namespace APC_NAV
 
             List<ItemMaster> itemsList = new List<ItemMaster>();
             DataTable dt = new DataTable();
-            String query = "select top 100 Item.description,APC_MASTER.* from APC_MASTER inner join Item on Item.[No_] =APC_MASTER.item_id";
+            //Query viejo para trabaja para NAV 2015, version original en la cual se creó esta aplicacion
+            //String query = "select top 100 Item.description,APC_MASTER.* from APC_MASTER inner join Item on Item.[No_] =APC_MASTER.item_id";
+
+            //Query adaptado para trabajar con BC 27
+            String query = "SELECT TOP 100 i.[Description],APC_MASTER.* FROM APC_MASTER " +
+               "INNER JOIN [dbo].[HLF$Item$437dbf0e-84ff-417a-965d-ed2bb9650972] i on i.[No_] =APC_MASTER.item_id;";
+
+
             dt = DBConnection.queryTable(query);
             foreach (DataRow row in dt.Rows)
             {

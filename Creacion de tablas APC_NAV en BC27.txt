@@ -1,0 +1,132 @@
+---------------Creacion de tablas APC_NAV en BC27------------------------
+CREATE TABLE dbo.APC_Approved_queue
+(
+    id BIGINT IDENTITY(1,1) NOT NULL,
+    suggestion_id BIGINT NOT NULL,
+    item_id VARCHAR(20) NOT NULL,
+    unit_of_measure VARCHAR(20) NOT NULL,
+    price_group VARCHAR(20) NOT NULL,
+    posted_invoice_id VARCHAR(20) NOT NULL,
+    status INT NOT NULL,
+    approval_by VARCHAR(200) NOT NULL,
+    approval_time DATETIME NOT NULL,
+    commited_by VARCHAR(200) NULL,
+    commited_time DATETIME NULL,
+
+    CONSTRAINT PK_APC_Approved_queue
+        PRIMARY KEY (id)
+);
+
+CREATE TABLE dbo.APC_Invoices_Asignaction
+(
+    id BIGINT IDENTITY(1,1) NOT NULL,
+    invoice_id VARCHAR(20) NOT NULL,
+    asigned_to_user VARCHAR(20) NOT NULL,
+    asigned_by_user VARCHAR(20) NOT NULL,
+    asigned_date DATETIME NOT NULL,
+    last_modified_by_user VARCHAR(20) NOT NULL,
+    las_modification_time DATETIME NULL,
+
+    CONSTRAINT PK_APC_Invoices_Asignaction
+        PRIMARY KEY (id),
+
+    CONSTRAINT UK_APC_Invoices_Asignaction
+        UNIQUE (invoice_id)
+);
+
+
+CREATE TABLE dbo.APC_MASTER
+(
+    id BIGINT IDENTITY(1,1) NOT NULL,
+    item_id VARCHAR(20) NOT NULL,
+    unit_of_measure_code VARCHAR(20) NULL,
+    price_group VARCHAR(20) NOT NULL,
+    last_cost DECIMAL(38,20) NOT NULL,
+    cost_variation_margin_allowed DECIMAL(38,20) NOT NULL,
+    rounding INT NOT NULL,
+    last_price_change_date DATETIME NULL,
+    sales_price_margin DECIMAL(38,20) NOT NULL,
+    price_before_change DECIMAL(38,20) NULL,
+    last_price_setted DECIMAL(38,20) NULL,
+    deleted BIT NOT NULL,
+    deleted_date DATETIME NULL,
+    label_required BIT NOT NULL,
+    exclude_for_pricing_change BIT NOT NULL,
+
+    CONSTRAINT PK_APC_MASTER
+        PRIMARY KEY (id),
+
+    CONSTRAINT UK_APC_MASTER
+        UNIQUE (item_id, unit_of_measure_code, price_group),
+
+    CONSTRAINT CHK_APC_MASTER_cost_variation_margin_allowed
+        CHECK (cost_variation_margin_allowed > 0),
+
+    CONSTRAINT CHK_APC_MASTER_rounding
+        CHECK (rounding IN (1,2,3))
+);
+
+
+CREATE TABLE dbo.APC_price_change
+(
+    id BIGINT IDENTITY(1,1) NOT NULL,
+    approved_queue_id BIGINT NOT NULL,
+    item_id VARCHAR(20) NOT NULL,
+    unit_of_measure VARCHAR(20) NOT NULL,
+    price_group VARCHAR(20) NOT NULL,
+    posted_invoice_id VARCHAR(20) NOT NULL,
+    status INT NOT NULL,
+    price_change_queue_time DATETIME NOT NULL,
+
+    CONSTRAINT PK_APC_price_change
+        PRIMARY KEY (id)
+);
+
+
+CREATE TABLE dbo.APC_Replication
+(
+    id BIGINT IDENTITY(1,1) NOT NULL,
+    apc_price_change_id BIGINT NOT NULL,
+    pos_terminal VARCHAR(20) NOT NULL,
+    host VARCHAR(255) NOT NULL,
+    db_name VARCHAR(255) NOT NULL,
+    user_id VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    instance_name VARCHAR(255) NOT NULL,
+    company_name VARCHAR(255) NOT NULL,
+    status INT NOT NULL,
+    queued_date DATETIME NOT NULL
+        CONSTRAINT DF_APC_Replication_queued_date DEFAULT(GETDATE()),
+
+    CONSTRAINT PK_APC_Replication
+        PRIMARY KEY (id),
+
+    CONSTRAINT FK_APC_Replication_APC_price_change
+        FOREIGN KEY (apc_price_change_id)
+        REFERENCES dbo.APC_price_change(id)
+);
+
+
+
+CREATE TABLE dbo.APC_sugestion_queue
+(
+    id BIGINT IDENTITY(1,1) NOT NULL,
+    item_id VARCHAR(20) NOT NULL,
+    unit_of_measure VARCHAR(20) NOT NULL,
+    price_group VARCHAR(20) NOT NULL,
+    posted_invoice_id VARCHAR(20) NOT NULL,
+    sugestion_generation_time DATETIME NOT NULL,
+    sugestion_status INT NOT NULL,
+    last_status_change_generation DATETIME NOT NULL,
+    previous_cost DECIMAL(38,20) NOT NULL,
+    new_cost DECIMAL(38,20) NOT NULL,
+    previous_price DECIMAL(38,20) NULL,
+    new_suggested_price DECIMAL(38,20) NULL,
+    price_assigned_to_change DECIMAL(38,20) NOT NULL,
+    last_change_user VARCHAR(200) NULL,
+    quantity DECIMAL(38,20) NULL
+        CONSTRAINT DF_APC_sugestion_queue_quantity DEFAULT(0),
+
+    CONSTRAINT PK_APC_sugestion_queue
+        PRIMARY KEY (id)
+);
